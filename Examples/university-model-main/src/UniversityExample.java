@@ -46,6 +46,8 @@ public class UniversityExample {
         
         int total = department.calculateRevenuesBySemester("Fall2023");
         System.out.println("Total: " + total);
+        
+        System.out.println(course.getCoursePrice());
 
     }
 
