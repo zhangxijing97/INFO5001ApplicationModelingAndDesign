@@ -19,13 +19,13 @@ import CourseSchedule.CourseOffer;
 import CourseSchedule.CourseSchedule;
 import CourseSchedule.SeatAssignment;
 import Department.Department;
+import Persona.Faculty.FacultyDirectory;
+import Persona.Faculty.FacultyProfile;
 import Persona.Person;
 import Persona.PersonDirectory;
 import Persona.StudentDirectory;
 import Persona.StudentProfile;
 import Persona.Transcript;
-import Persona.Faculty.FacultyDirectory;
-import Persona.Faculty.FacultyProfile;
 
 /**
  *
@@ -214,11 +214,11 @@ public class UniversityExample {
         // SeatAssignment seatAssignment10 = info7390offerFall2023.assignEmptySeat(student10CurrentCourseLoad);
 
         // Create 25 seats for each course offering
-        info5001offerFall2023.generateSeats(10);
-        info5002offerFall2023.generateSeats(10);
-        info5100offerFall2023.generateSeats(10);
-        info7250offerFall2023.generateSeats(10);
-        info7390offerFall2023.generateSeats(10);
+        info5001offerFall2023.generateSeats(25);
+        info5002offerFall2023.generateSeats(25);
+        info5100offerFall2023.generateSeats(25);
+        info7250offerFall2023.generateSeats(25);
+        info7390offerFall2023.generateSeats(25);
 
         SeatAssignment seatAssignment01 = info5001offerFall2023.assignEmptySeat(student01CurrentCourseLoad);
         SeatAssignment seatAssignment02 = info5001offerFall2023.assignEmptySeat(student02CurrentCourseLoad);
