@@ -8,11 +8,17 @@ package model.Supplier;
 import java.util.ArrayList;
 import java.util.Random;
 
+import model.CustomerManagement.CustomerDirectory;
+import model.ProductManagement.Product;
+import model.ProductManagement.ProductSummary;
+import model.ProductManagement.ProductsReport;
+
 /**
  *
  * @author kal bugrara
  */
 public class SupplierDirectory {
+
     ArrayList<Supplier> suppliers;
 
     public SupplierDirectory() {
@@ -65,6 +71,17 @@ public class SupplierDirectory {
         for (Supplier s : suppliers) {
             s.printShortInfo();
         }
+    }
+
+    public SuppliersReport generateSuppliersReport() {
+        SuppliersReport suppliersreport = new SuppliersReport();
+
+        for (Supplier s : suppliers) {
+
+            SupplierSummary ss = new SupplierSummary(s);
+            suppliersreport.addSupplierSummary(ss);
+        }
+        return suppliersreport;
     }
 
 }

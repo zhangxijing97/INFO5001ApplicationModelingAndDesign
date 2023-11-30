@@ -22,6 +22,7 @@ import model.ProductManagement.ProductCatalog;
 import model.ProductManagement.ProductsReport;
 import model.Supplier.Supplier;
 import model.Supplier.SupplierDirectory;
+import model.Supplier.SuppliersReport;
 
 /**
  *
@@ -53,12 +54,13 @@ public class DigitalMarketingApplication {
     // customers)
     // - Top 5 Sales Score (Total sales to top 5 Customers divided by total sales)
 
-    // - Pick a random Supplier and get the report of the Supplier
     SupplierDirectory supplierDirectory = business.getSupplierDirectory();
-    // Iterate through all suppliers in the directory
-    for (Supplier supplier : supplierDirectory.getSuplierList()) {
-      supplier.supplierReport(business.getCustomerDirectory());
-    }
+    SuppliersReport mySuppliersReport = supplierDirectory.generateSuppliersReport();
+    mySuppliersReport.printSuppliersReport();
+
+    // for (Supplier supplier : supplierDirectory.getSuplierList()) {
+    // supplier.supplierReport(business.getCustomerDirectory());
+    // }
 
   }
 }
